@@ -1,7 +1,7 @@
 name: WhoAreYou
 main: uk.co.oliwali.WhoAreYou.WhoAreYou
-version: 0.1.5
-author: oliverw92
+version: 0.2.0
+author: oliverw92, lihad
 commands:
   who:
     description: List online players
