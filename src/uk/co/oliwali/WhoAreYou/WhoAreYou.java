@@ -9,7 +9,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
-import org.bukkit.event.Event.Type;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -33,7 +32,7 @@ public class WhoAreYou extends JavaPlugin {
         
         // Register events
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvent(Type.PLAYER_JOIN, playerListener, Event.Priority.Monitor, this);
+        pm.registerEvents(playerListener,this);
         
         Util.info("Version " + version + " enabled!");
 	}

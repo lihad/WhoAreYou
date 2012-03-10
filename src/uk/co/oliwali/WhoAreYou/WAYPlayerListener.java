@@ -1,9 +1,9 @@
 package uk.co.oliwali.WhoAreYou;
 
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerListener;
 
-public class WAYPlayerListener extends PlayerListener {
+public class WAYPlayerListener implements Listener {
 	
 	public WhoAreYou plugin;
 

@@ -97,7 +97,7 @@ public class Util {
     	DARK_GRAY("8", 0x8),
     	GRAY("7", 0x7),
     	WHITE("f", 0xf),
-    	DARK_AQUA("3", 0x3);
+    	TEAL("3", 0x3);
     	
     	private String custom;
     	private int code;
