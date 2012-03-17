@@ -47,31 +47,31 @@ public class Permission {
 	}
 	
 	public String getPrefix(Player player) {
-		String suffix = "&f";
+		String prefix = "&f";
 		switch (handler) {
 			case PERMISSIONS:
 				String permPrefix = permissionPlugin.getGroupPrefix(player.getWorld().getName(), getGroup(player));
 				if (permPrefix != null)
-					suffix = permPrefix;
+					prefix = permPrefix;
 				break;
 			case OP:
 				if (player.isOp())
-					suffix = "&c";
+					prefix = "&c";
 				break;
 		}
-		if (suffix.length() == 0)
+		if (prefix.length() == 0)
 			return "&f";
-		return suffix;
+		return prefix;
 	}
 	
 	public String getSuffix(Player player) {
-		String prefix = null;
+		String suffix = null;
 		switch (handler) {
 			case PERMISSIONS:
-				prefix = permissionPlugin.getGroupSuffix(player.getWorld().getName(), getGroup(player));
+				suffix = permissionPlugin.getGroupSuffix(player.getWorld().getName(), getGroup(player));
 				break;
 		}
-		return prefix;
+		return suffix;
 	}
 	
 	public String getGroup(Player player) {
