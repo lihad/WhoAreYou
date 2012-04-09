@@ -1,6 +1,7 @@
 package uk.co.oliwali.WhoAreYou;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.bukkit.Location;
@@ -45,8 +46,7 @@ public class WhoAreYou extends JavaPlugin {
 	
 	public void who(CommandSender player) {
 		List<Player> players = new ArrayList<Player>();
-		for (World world : getServer().getWorlds().toArray(new World[0]))
-			players.addAll(world.getPlayers());
+			players.addAll(Arrays.asList(this.getServer().getOnlinePlayers()));
 		sendPlayerList(player, "&aServer player list &7(" + players.size() + "/" + getServer().getMaxPlayers() + ")&a:&f", players);
 	}
 	

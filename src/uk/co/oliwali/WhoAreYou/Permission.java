@@ -65,13 +65,13 @@ public class Permission {
 	}
 	
 	public String getSuffix(Player player) {
-		String prefix = "";
+		String suffix = "";
 		switch (handler) {
 			case PERMISSIONS:
-				prefix = permissionPlugin.getGroupPrefix(player.getWorld().getName(), getGroup(player));
+				suffix = permissionPlugin.getGroupSuffix(player.getWorld().getName(), getGroup(player));
 				break;
 		}
-		return prefix;
+		return suffix;
 	}
 	
 	public String getGroup(Player player) {
